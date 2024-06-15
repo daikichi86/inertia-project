@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+$properties: "blue", "black", "white", "gray";
+
+@each $property in $properties {
+    .u-bg-#{$property} {
+        background-color: #{$property};
+    }
+    .u-cl-#{$property} {
+        color: #{$property};
+    }
+}

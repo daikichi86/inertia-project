@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@for $m from 0 through 100 {
+    .u-m-#{$m} {
+        margin: 1px * $m;
+    }
+    .u-mt-#{$m} {
+        margin-top: 1px * $m;
+    }
+    .u-mb-#{$m} {
+        margin-bottom: 1px * $m;
+    }
+    .u-ml-#{$m} {
+        margin-left: 1px * $m;
+    }
+    .u-mr-#{$m} {
+        margin-right: 1px * $m;
+    }
+}
+// .u-mr {
+//     @for $mr from 1 through 1000 {
+//         &-#{$mr} {
+//             margin-right: 1px * $mr;
+//         }
+//     }
+// }

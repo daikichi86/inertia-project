@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@for $p from 0 through 100 {
+    .u-p-#{$p} {
+        padding: 1px * $p;
+    }
+    .u-pt-#{$p} {
+        padding-top: 1px * $p;
+    }
+    .u-pb-#{$p} {
+        padding-bottom: 1px * $p;
+    }
+    .u-pl-#{$p} {
+        padding-left: 1px * $p;
+    }
+    .u-pr-#{$p} {
+        padding-right: 1px * $p;
+    }
+}
+
+// .u-pr {
+//     @for $pr from 1 through 1000 {
+//         &-#{$pr} {
+//             padding-right: 1px * $pr;
+//         }
+//     }
+// }

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.u-h {
+    @for $h from 1 through 1000 {
+        &-#{$h} {
+            height: 1px * $h;
+        }
+    }
+}
+
+.u-h-pct {
+    @for $h from 1 through 100 {
+        &-#{$h} {
+            height: 1% * $h;
+        }
+    }
+}
+
+.u-vh {
+    @for $h from 1 through 100 {
+        &-#{$h} {
+            height: 1vh * $h;
+        }
+    }
+}

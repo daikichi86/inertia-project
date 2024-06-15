@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.u-w {
+    @for $w from 1 through 2000 {
+        &-#{$w} {
+            width: 1px * $w;
+        }
+    }
+}
+
+.u-w-pct {
+    @for $w from 1 through 100 {
+        &-#{$w} {
+            width: 1% * $w;
+        }
+    }
+}

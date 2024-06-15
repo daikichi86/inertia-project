@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+$properties: "block", "inline", "inline-block", "inline-flex", "none", "flex";
+
+@each $property in $properties {
+    .u-d-#{$property} {
+        display: #{$property};
+    }
+}

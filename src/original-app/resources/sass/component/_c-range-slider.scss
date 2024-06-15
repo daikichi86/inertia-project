@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+input[type="range"] {
+    /* デフォルトの appearance を削除（必須）*/
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* outline を削除してデフォルトの focus のスタイルを無効に */
+    outline: none;
+
+    /* カーソルを pointer に */
+    cursor: pointer;
+
+    /* 幅を設定（任意の値）*/
+    width: 60%;
+
+    /* Track のスタイルを追加 */
+    background: #fff; /* Track の背景色 */
+    height: 4px; /* Track の高さ */
+    border-radius: 8px; /* Track の角丸 */
+}

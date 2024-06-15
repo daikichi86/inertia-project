@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.u-br {
+    @for $br from 1 through 1000 {
+        &-#{$br} {
+            border-radius: 1px * $br;
+        }
+    }
+}

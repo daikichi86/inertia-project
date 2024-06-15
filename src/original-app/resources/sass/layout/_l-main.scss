@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.main {
+    margin-top: 50px;
+    margin-left: 250px;
+    height: calc(100vh - 130px);
+    background-color: $palette-light-black;
+    color: $palette-white;
+    overflow-y: scroll;
+
+    &-category-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        background-color: transparent;
+        color: $palette-white;
+        border: none;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+/* スクロールバー全体のスタイル */
+.main::-webkit-scrollbar {
+    width: 12px; /* スクロールバーの幅 */
+}
+
+/* スクロールバーのトラック（背景部分）のスタイル */
+.main::-webkit-scrollbar-track {
+    background: #f1f1f1; /* トラックの背景色 */
+}
+
+/* スクロールバーのハンドル（つまみ）のスタイル */
+.main::-webkit-scrollbar-thumb {
+    background: #888; /* ハンドルの背景色 */
+}
+
+/* スクロールバーのハンドルのホバー時のスタイル */
+.main::-webkit-scrollbar-thumb:hover {
+    background: #555; /* ホバー時の背景色 */
+}

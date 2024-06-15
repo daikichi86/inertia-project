@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@for $p from 0 through 3 {
+    .u-fg-#{$p} {
+        flex-grow: $p;
+    }
+}

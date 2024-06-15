@@ -1,0 +1,47 @@
+version: "3.8"
+services:
+  app:
+    build: ./docker/app
+    ports:
+      - "8000:8000"
+      - "5173:5173"
+    volumes:
+      - type: bind
+        source: ./src/original-app
+        target: /var/www/app
+    command: bash
+    stdin_open: true
+    tty: true
+
+  mysql:
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_USER=app
+      - MYSQL_PASWORD=pass1234
+      - MYSQL_DATABASE=sample
+      - TZ=Asia/Tokyo
+    ports:
+      - "3306:3306"
+    volumes:
+      - type: volume
+        source: db-compose-volume
+        target: /var/lib/mysql
+      - type: bind
+        source: ./docker/db/init
+        target: /docker-entrypoint-initdb.d
+    image: mysql:8.2.0
+
+  phpmyadmin:
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOSTS=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=secret
+    ports:
+      - "3001:80"
+    image: phpmyadmin
+    depends_on:
+      - mysql
+
+volumes:
+  db-compose-volume:
